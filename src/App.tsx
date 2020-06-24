@@ -1,26 +1,43 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useReducer } from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import './index.css';
+import Board from './components/Board';
+
+let squaresNum = 8;
+
+export default class App extends React.Component {
+    constructor(props: Readonly<{}>) {
+        super(props);
+        this.state = {
+            squaresNum: 8
+        }
+    }
+
+    setSquaresNum(value: string) {
+        squaresNum = +value;
+        this.setState({
+            squaresNum: +value
+        });
+    }
+
+    render() {
+        return (
+            <div>
+                <div className="game">
+                    <div className="game-board">
+                        <Board
+                            squaresNum = {squaresNum}
+                        />
+                    </div>
+                </div>
+
+                <div className="icons-attribution">
+                    <div>Please enter Square number you feel like you want to have!</div>
+                    <div><input type="number" onChange={e => this.setSquaresNum(e.target.value)} /></div>
+                </div>
+            </div>
+
+
+        );
+    }
 }
-
-export default App;
