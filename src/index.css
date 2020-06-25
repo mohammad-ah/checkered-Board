@@ -89,10 +89,18 @@ h3{
   font-size: 16px;
 }
 
-.Top {
+.red-blue.Top {
   background-color: red;
 }
 
-.Bottom {
+.red-blue.Bottom {
   background-color: blue;
+}
+
+.orange-green.Top {
+  background-color: orange;
+}
+
+.orange-green.Bottom {
+  background-color: green;
 }
