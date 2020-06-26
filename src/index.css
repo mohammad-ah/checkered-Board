@@ -80,7 +80,6 @@ h3{
 
 .shape {
   border: none;
-  border-radius: 25px;
   color: white;
   padding: 23px 23px;
   text-align: center;
@@ -89,18 +88,47 @@ h3{
   font-size: 16px;
 }
 
-.red-blue.Top {
+.red-blue.Top.circle{
   background-color: red;
 }
 
-.red-blue.Bottom {
+.red-blue.Bottom.circle {
   background-color: blue;
 }
 
-.orange-green.Top {
+.orange-green.Top.circle {
   background-color: orange;
 }
 
-.orange-green.Bottom {
+.orange-green.Bottom.circle {
   background-color: green;
+}
+
+.circle {
+  border-radius: 25px;
+}
+
+.red-blue.trapezoid.Top {
+  border-bottom-color: red;
+}
+
+.red-blue.trapezoid.Bottom {
+  border-bottom-color: blue;
+}
+
+.orange-green.trapezoid.Top {
+  border-bottom-color: orange;
+}
+
+.orange-green.trapezoid.Bottom {
+  border-bottom-color: green;
+}
+
+.trapezoid {
+  border-bottom: 20px solid;
+  border-left: 20px solid transparent;
+  border-right: 16px solid transparent;
+  height: 0;
+  border-top: none;
+  background-color: transparent;
 }

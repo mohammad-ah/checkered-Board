@@ -11,6 +11,7 @@ export default class Board extends React.Component {
             includeCircle = {includeCircle}
             shapeStyle = {shapeStyle}
             shapesColor = {this.props.shapesColor}
+            pieceShape = {this.props.pieceShape}
         />
     }
 
